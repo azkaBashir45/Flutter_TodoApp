@@ -10,8 +10,18 @@ class TodoScreen extends StatefulWidget {
 class _TodoScreenState extends State<TodoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Azka'),
+    return Scaffold(
+      backgroundColor: Colors.black87,
+      floatingActionButton: FloatingActionButton(
+        tooltip: 'Add Item',
+        backgroundColor: Colors.blue,
+        child: ListTile(
+          title: Icon(Icons.add),
+        ),
+        onPressed: _ShowFormDialog,
+      ),
     );
   }
+
+  void _ShowFormDialog() {}
 }
